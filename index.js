@@ -5,13 +5,15 @@ const mongojs = require("./lib/mongodb")
 const app = express()
 
 const port = process.env.PORT || 3000
-
+const authAccess = require("./middleware/verifyToken")
 app.use(express.json());
 
 (async () => {
     await mongojs.connect()
-    app.use("/products", require("./routes/productsRouter"))
-    app.use("/users", require("./routes/usersRouter"))
+    const prefix_v1 = "/api/v1/" 
+    app.use(prefix_v1 + "products", authAccess, require("./routes/productsRouter"))
+    app.use(prefix_v1 + "users", authAccess, require("./routes/usersRouter"))
+    app.use(prefix_v1 + "auth", require("./routes/authRouter"))
 })()
 
 
