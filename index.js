@@ -12,6 +12,14 @@ app.use(express.json());
     await mongojs.connect()
     app.use("/products", require("./routes/productsRouter"))
     app.use("/users", require("./routes/usersRouter"))
+    app.use("/measuresCategories", require("./routes/measuresCategoriesRouter"))
+    app.use("/categories", require("./routes/categoriesRouter"))
+    app.use("/colors", require("./routes/colorsRouter"))
+    app.use("/image_products", require("./routes/imageProductsRouter"))
+    app.use("/product_details", require("./routes/productDetailsRouter"))
+    app.use("/products_category", require("./routes/productsCategoriesRouter"))
+    app.use("/company_parameters", require("./routes/companyParametersRouter"))
+    app.use("/type_measures", require("./routes/typeMeasuresRouter"))
 })()
 
 
