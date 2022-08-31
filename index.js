@@ -14,6 +14,14 @@ app.use(express.json());
     app.use(prefix_v1 + "products", authAccess, require("./routes/productsRouter"))
     app.use(prefix_v1 + "users", authAccess, require("./routes/usersRouter"))
     app.use(prefix_v1 + "auth", require("./routes/authRouter"))
+    app.use( prefix_v1 + "measuresCategories", require("./routes/measuresCategoriesRouter"))
+    app.use( prefix_v1 + "categories", require("./routes/categoriesRouter"))
+    app.use( prefix_v1 + "colors", require("./routes/colorsRouter"))
+    app.use( prefix_v1 + "image_products", require("./routes/imageProductsRouter"))
+    app.use( prefix_v1 + "product_details", require("./routes/productDetailsRouter"))
+    app.use( prefix_v1 + "products_category", require("./routes/productsCategoriesRouter"))
+    app.use( prefix_v1 + "company_parameters", require("./routes/companyParametersRouter"))
+    app.use( prefix_v1 + "type_measures", require("./routes/typeMeasuresRouter"))
 })()
 
 
