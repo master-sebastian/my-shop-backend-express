@@ -1,18 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const colorsModel =  require('../models/colorsModel')
+const ColorsService = require('./../services/ColorsService')
 
-router.get("/create", async (req, res) => {
-    const {name} = req.query;
-    const color = new colorsModel();
-    color.name = name
-    const consult = await color.save()
-    res.json({ consult })
-})
+router.post("/", ColorsService.create )
 
-router.get("/", async (req, res) => {
-    const colors = await colorsModel.find({})
-    res.json(  colors)
-})
+router.get("/", ColorsService.get )
 
 module.exports = router

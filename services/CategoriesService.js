@@ -17,7 +17,7 @@ class CategoriesService{
     static async get(req, res) {
         try{
             const categories = await categoriesModel.find({})
-            res.json( categories )
+            res.status(200).json( categories )
         }catch(e){
             res.status(500).json({error: "Algo salio mal al listar las categorias"})
         }
