@@ -6,4 +6,8 @@ router.post("/", ColorsService.create )
 
 router.get("/", ColorsService.get )
 
+router.get("/:id", ColorsService.getById )
+
+router.delete("/:id", ColorsService.delete )
+
 module.exports = router

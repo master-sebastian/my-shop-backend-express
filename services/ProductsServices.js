@@ -26,6 +26,27 @@ class ProductsService {
         }
     }
 
+    static async getById(req, res) {
+        const { id } = req.params
+        try{
+            const product = await productsModel.findById(id)
+            console.log( product )
+            res.status(200).json(  product )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de extraer el product por el id ingresado"} )
+        }
+    }
+
+    static async delete (req, res) {
+        const { id } = req.params
+        try{
+            const product = await productsModel.findByIdAndDelete(id)
+            res.status(200).json(  product )
+        }catch(e){
+            res.status(500).json({error: "Error al tratar de eliminar el product"})
+        }
+    }
+
 
 }
 

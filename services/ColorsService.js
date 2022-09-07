@@ -22,6 +22,27 @@ class ColorsService {
             res.status(500).json({error: "Algo salio mal al listar los colores"})
         }
     }
+
+    static async getById(req, res) {
+        const { id } = req.params
+        try{
+            const color = await colorsModel.findById(id)
+            console.log( color )
+            res.status(200).json(  color )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de extraer el color por el id ingresado"} )
+        }
+    }
+
+    static async delete (req, res) {
+        const { id } = req.params
+        try{
+            const color = await colorsModel.findByIdAndDelete(id)
+            res.status(200).json(  color )
+        }catch(e){
+            res.status(500).json({error: "Error al tratar de eliminar el color"})
+        }
+    }
 }
 
 

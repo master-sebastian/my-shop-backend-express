@@ -1,22 +1,14 @@
 const express = require('express')
 const router = express.Router()
-const measuresCategoriesModel =  require('../models/measuresCategoriesModel')
 
+const MeasuresCategoriesServices = require('./../services/MeasuresCategoriesServices')
 
-router.get("/create", async (req, res) => {
-    const {id_category,valor,tipo} = req.query;
-    const measuresCategories = new measuresCategoriesModel();
-    measuresCategories.name = name
-    measuresCategories.valor = valor
-    measuresCategories.tipo = tipo
-    const consult = await measuresCategories.save()
-    res.json({ consult })
-})
+router.post("/", MeasuresCategoriesServices.create)
 
-router.get("/", async (req, res) => {
-    const measuresCategory = await measuresCategoriesModel.find({})
-    console.log(measuresCategory)
-    res.json(  measuresCategory )
-})
+router.get("/", MeasuresCategoriesServices.get)
+
+router.get("/:id", MeasuresCategoriesServices.getById )
+
+router.delete("/:id", MeasuresCategoriesServices.delete )
 
 module.exports = router
