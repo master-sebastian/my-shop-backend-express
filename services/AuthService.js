@@ -46,6 +46,10 @@ class AuthService {
             })
         }   
     }
+
+    static validToken(req, res){
+        res.json({auth: true})
+    }
 }
 
 module.exports = AuthService
