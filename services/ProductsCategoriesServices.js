@@ -4,10 +4,10 @@ const mongoose =  require('mongoose')
 
 class ProductsCategoriesServices {
     static async create(req, res) {
-        const {id_category,id_product} = req.body;
+        const {id_measurescategory,id_product} = req.body;
         try{
             const productsCategories = new productsCategoriesModel();
-            productsCategories.id_category = mongoose.Types.ObjectId(id_category)
+            productsCategories.id_measurescategory = mongoose.Types.ObjectId(id_measurescategory)
             productsCategories.id_product = mongoose.Types.ObjectId(id_product)
             const consult = await productsCategories.save()
             res.json({ consult })

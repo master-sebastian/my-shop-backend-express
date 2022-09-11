@@ -1,18 +1,18 @@
 const imageProductsModel =  require('../models/imageProductsModel')
 const mongoose =  require('mongoose')
 
-class ImageProductsRouter {
+class ImageProductsService {
     static async create(req, res) {
-        const {url,id_productdetail} = req.body;
+        const {url,id_products} = req.body;
         try{
             const image_product = new imageProductsModel();
             image_product.url = url
-            image_product.id_productdetail = mongoose.Types.ObjectId(id_productdetail)
+            image_product.id_products = mongoose.Types.ObjectId(id_products)
             const consult = await image_product.save()
             res.json({ consult })
         }catch(e){
             res.json({error: "error al tratar de crear un image_product"})
-    }
+        }
     }
 
     static async get(req, res) {
@@ -51,4 +51,4 @@ class ImageProductsRouter {
 
 
 
-module.exports = ImageProductsRouter
+module.exports = ImageProductsService

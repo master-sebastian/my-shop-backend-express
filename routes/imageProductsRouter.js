@@ -2,14 +2,14 @@ const express = require('express')
 
 const router = express.Router()
 
-const ImageProductsRouter = require("../services/ImageProductsRouter")
+const ImageProductsService = require("./../services/ImageProductsService")
 
-router.post("/", ImageProductsRouter.create )
+router.post("/", ImageProductsService.create )
 
-router.get("/", ImageProductsRouter.get )
+router.get("/", ImageProductsService.get )
 
-router.get("/:id", ImageProductsRouter.getById )
+router.get("/:id", ImageProductsService.getById )
 
-router.delete("/:id", ImageProductsRouter.delete )
+router.delete("/:id", ImageProductsService.delete )
 
 module.exports = router

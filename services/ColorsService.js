@@ -3,10 +3,11 @@ const colorsModel =  require('../models/colorsModel')
 class ColorsService {
     
     static async create(req, res) {
-        const {name} = req.body;
+        const {name, hex_code} = req.body;
         try{
             const color = new colorsModel();
             color.name = name
+            color.hex_code = hex_code
             const consult = await color.save()
             res.status(201).json( consult )
         }catch(e){

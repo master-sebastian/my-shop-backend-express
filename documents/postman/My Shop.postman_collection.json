@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b950ec1b-383c-4cef-968d-12c68fc7b140",
+		"_postman_id": "eef6cf72-5e80-431f-b8ed-5cd16a8146a0",
 		"name": "My Shop",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -392,7 +392,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"white\"\r\n}"
+							"raw": "{\r\n    \"name\": \"white\",\r\n    \"hex_code\": \"\"\r\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v1/colors",
@@ -627,7 +627,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v1/image_products/6318290be7a205636ca36521",
+							"raw": "{{domain}}/api/v1/image_products/631c5daab745796d0f9f3c97",
 							"host": [
 								"{{domain}}"
 							],
@@ -635,7 +635,7 @@
 								"api",
 								"v1",
 								"image_products",
-								"6318290be7a205636ca36521"
+								"631c5daab745796d0f9f3c97"
 							]
 						}
 					},
@@ -669,7 +669,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"url\": \"soy\",\r\n    \"id_productdetail\" : \"62fb3746ebf6203a36dd658b\"\r\n}"
+							"raw": "{\r\n    \"url\": \"https://lh3.googleusercontent.com/fife/AAbDypAVxBS7P8Nx-Xd7kEzhaOl36Bq26CqAzon1SBzhGWs6vi2-LhqxBL6wch-URt-IJmNmcTfdMayaR4JxaZR20kbd6uO2R-eC6nHAl8bPyZp45XvNGNAZNT2t_00-yAUYx13gQlhGKhC-NHI7qLFUPFOy3nQlcp97igCN1KtNJKtNCHNaTP0_7mGSws7M2Dg6oUnDoftWYVQ1IWmJWEWBKEltIgjpKu5_NAmubCS76E_ZRp6XuKohEJ972PJ462W-A0J0J0l5bhxf6uM8QxJJhR7SH3_bZ5R7TVma72xooO98zWa_JVTuduVX74s5q03Bv0BaHNp91S3DY0mFhhjdhY-QKsJ_iDI4TEFhRfWy2kL-ikWh66WlZLh4dyrYWFfanuMz3_po8BHqIy67hqjdtjbLnqqZ_1ZnjPqKddl3Z2XR_TePEHIIPY5M228LnBkIXT3NA6dapO-aOHEvuc1yhekMggCvhKIcc9Tf4ifeO3lOwGW2NNrfr2PAnvz3mYlaO8zRdPVB1PsGwZ4_n1buqH7RHCK_NLonNrOcnUSTfhMJrFIbiJjmUEhXlURjeAWjvGC3kUa497P9X_iJoO31qFT-BWa8HQunXwUYSz-HUtLnGxQcHcXV1Ah-P_HYxnjtSi9EUYJotxTUsBbSCDjXSHD3ETVpeL_7wkrTtFC0u9CExPrjonY3sxfY0cbBt1y1RlO0K6YCflSQ2bCP9GnFdSIb0Q0efKyTpDeD2_Efu_LsrA211aGZ4ZTeItI_vkoVyLgmC82VUlu-Sh00pzCv8JqST8rag-T1KSSHJhboTmzrZH2twpB4JZCnfcFPYcGfe2wwHL5gWaG2CCdyllqK31KBMadlGSbCJHct-_6dTWjixH72tGYqnOth94zA0MBBSHh7HHQvovyl8Y1nD1lWyqybefkBq8-CgfElpCDN_W3WzUAZHnlppfTrW5mB54jZp_JQQQ5Ij7ke21UryEXdoR_qIIZ9vYRLv_nZXH93QexowAPmTrZbLGcYmyK0kDQDWPr4YzmRIMnvLq-Ru_pAvfJtafyycn7NB-KQPu4AQOOUQ1EIlQRcmjX7uJaSnkQFg4YXdoAJ59celLwsdWCMecgdg28SQm9qIUJdc4xqaHTSeZum8pQ9mjAhZYseqAwlyBC7lrUDPrw4og9fo94rIrgLDbpS50bKAuA51z7daokHTqoKfPptQo0tUd4lAWTi-0AEOr2cMs2C0bY0idED7nRn1LcTqlRSgBWFVLzUhC9NpelbzCMlFkJY4mNB6YkBki0ZV0Smpu_-jd9OeP8BpXqx87_P6gzQdQnMrKSvF3yU=w1920-h892\",\r\n    \"id_products\" : \"631c5d5cb745796d0f9f3c91\"\r\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v1/image_products/",
@@ -828,149 +828,10 @@
 			]
 		},
 		{
-			"name": "ProductDetails",
-			"item": [
-				{
-					"name": "Obtener todos los ProductDetails",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{domain}}/api/v1/product_details",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"product_details"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Obtener el ProductDetails id",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{domain}}/api/v1/product_details/62fb3620ebf6203a36dd6584",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"product_details",
-								"62fb3620ebf6203a36dd6584"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Eliminar ProductDetails",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{domain}}/api/v1/product_details/6318354b9b9ebec98609c57b",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"product_details",
-								"6318354b9b9ebec98609c57b"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Crear nuevo ProductDetails",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "default"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "default"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"estado\": \"true\",\r\n    \"id_product\": \"62fb3681ebf6203a36dd6585\",\r\n    \"id_colors\": \"62fb3697ebf6203a36dd6586\",\r\n    \"id_measurescategory\": \"62fb36c4ebf6203a36dd6587\"\r\n}"
-						},
-						"url": {
-							"raw": "{{domain}}/api/v1/product_details/",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"product_details",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "ProductsCategories",
 			"item": [
 				{
-					"name": "Obtener todos los Imageproducts",
+					"name": "Obtener todos las categorias adicionales asociadas al producto",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -999,7 +860,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener el Imageproducts id",
+					"name": "Obtener la categoria adicional asociada al producto por id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1029,7 +890,7 @@
 					"response": []
 				},
 				{
-					"name": "Eliminar Imageproducts",
+					"name": "Eliminar la categoria adicional asociada al producto por id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1044,7 +905,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v1/products_category/630eec171d6f884a92433cde",
+							"raw": "{{domain}}/api/v1/products_category/631c57d136eed3378c27f154",
 							"host": [
 								"{{domain}}"
 							],
@@ -1052,14 +913,14 @@
 								"api",
 								"v1",
 								"products_category",
-								"630eec171d6f884a92433cde"
+								"631c57d136eed3378c27f154"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Crear nuevo Imageproducts",
+					"name": "Crear nueva categoria adicional asociada al producto por id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1086,7 +947,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_category\": \"62fb30d3ebf6203a36dd6555\",\r\n    \"id_product\": \"62fb3126ebf6203a36dd6556\"\r\n}"
+							"raw": "{\r\n    \"id_measurescategory\": \"62fb30d3ebf6203a36dd6555\",\r\n    \"id_product\": \"62fb3126ebf6203a36dd6556\"\r\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v1/products_category/",
@@ -1194,7 +1055,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v1/products/630dad54766faeb11f9c1f12",
+							"raw": "{{domain}}/api/v1/products/631c7df5b751cb42472fe7dd",
 							"host": [
 								"{{domain}}"
 							],
@@ -1202,7 +1063,7 @@
 								"api",
 								"v1",
 								"products",
-								"630dad54766faeb11f9c1f12"
+								"631c7df5b751cb42472fe7dd"
 							]
 						}
 					},
@@ -1236,7 +1097,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Camisa blanca\",\r\n    \"price\": 43344.23,\r\n    \"amount\": 121,\r\n    \"description\": \"Es un buen producto\"\r\n}"
+							"raw": "{\r\n    \"name\": \"Aretes topo tapa rosca oro de 14 kilates\",\r\n    \"price\": 70000,\r\n    \"amount\": 1,\r\n    \"description\": \"Elefantes\",\r\n    \"estado\": true,\r\n    \"id_measurescategory\": \"631c325a26fe1cd4bb3a6a8c\"\r\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/api/v1/products",
@@ -1247,6 +1108,51 @@
 								"api",
 								"v1",
 								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aretes topo tap rosca oro de 14 kilates\",\r\n    \"price\": 20000,\r\n    \"amount\": 1,\r\n    \"description\": \"Elefantes\",\r\n    \"estado\": true,\r\n    \"id_measurescategory\": \"631c325a26fe1cd4bb3a6a8c\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v1/products/631c79ce78d7350921cca993",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"631c79ce78d7350921cca993"
 							]
 						}
 					},
@@ -1332,7 +1238,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v1/type_measures/630fe96ae695fd9ca4893b2f",
+							"raw": "{{domain}}/api/v1/type_measures/63181fae49b83d2f6b6d46f4",
 							"host": [
 								"{{domain}}"
 							],
@@ -1340,7 +1246,7 @@
 								"api",
 								"v1",
 								"type_measures",
-								"630fe96ae695fd9ca4893b2f"
+								"63181fae49b83d2f6b6d46f4"
 							]
 						}
 					},

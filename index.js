@@ -36,7 +36,6 @@ app.use(express.json());
     app.use( prefix_v1 + "colors", authAccess, require("./routes/colorsRouter"))
     app.use( prefix_v1 + "measuresCategories", authAccess, require("./routes/measuresCategoriesRouter"))
     app.use( prefix_v1 + "image_products",authAccess, require("./routes/imageProductsRouter"))
-    app.use( prefix_v1 + "product_details", authAccess, require("./routes/productDetailsRouter"))
     app.use( prefix_v1 + "products_category", authAccess, require("./routes/productsCategoriesRouter"))
     app.use( prefix_v1 + "company_parameters", authAccess, require("./routes/companyParametersRouter"))
 })()

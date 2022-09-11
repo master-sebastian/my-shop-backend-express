@@ -1,4 +1,5 @@
 const measuresCategoriesModel =  require('../models/measuresCategoriesModel')
+
 const mongoose =  require('mongoose')
 
 class MeasuresCategoriesServices {
@@ -19,18 +20,18 @@ class MeasuresCategoriesServices {
 
     static async get(req, res) {
         try{
-            const measuresCategories = await measuresCategoriesModel.find({})
+            const measuresCategories = await measuresCategoriesModel.find({}).populate({ path: 'id_category', select: {_id: 0} } ).populate({ path: 'id_colors', select: {_id: 0} } ).populate({ path: 'id_measuretype' , select: {_id: 0} } )
             console.log(measuresCategories)
             res.json(  measuresCategories )
         }catch(e){
-            res.status(500).json({error: "Algo salio mal al listar los measuresCategories"})
+            res.status(500).json({error: "Algo salio mal al listar los measuresCategories", e})
         }
     }
 
     static async getById(req, res) {
         const { id } = req.params
         try{
-            const measuresCategori = await measuresCategoriesModel.findById(id)
+            const measuresCategori = await measuresCategoriesModel.findById(id).populate({ path: 'id_category' } ).populate({ path: 'id_colors' } ).populate({ path: 'id_measuretype' } )
             console.log( measuresCategori )
             res.status(200).json(  measuresCategori )
         }catch(e){

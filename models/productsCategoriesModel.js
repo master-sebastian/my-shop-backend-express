@@ -3,7 +3,7 @@ const { Schema } = mongose;
 
 
 const schema = new Schema({
-    id_category: {type:Schema.ObjectId , required: true},
+    id_measurescategory: {type:Schema.ObjectId , required: true},
     id_product: {type:Schema.ObjectId , required: true}
 }, { versionKey: false });
 
