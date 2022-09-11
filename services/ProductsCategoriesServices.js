@@ -37,6 +37,20 @@ class ProductsCategoriesServices {
         }
     }
 
+    static async editById(req, res) {
+        const { id } = req.params
+        const {id_measurescategory,id_product} = req.body;
+        try{
+            const productsCategories = await productsCategoriesModel.findById(id)
+            productsCategories.id_measurescategory = mongoose.Types.ObjectId(id_measurescategory)
+            productsCategories.id_product = mongoose.Types.ObjectId(id_product)
+            const consult = await productsCategories.save()
+            res.json( consult )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de modificar el productsCategories por el id ingresado"} )
+        }
+    }
+
     static async delete (req, res) {
         const { id } = req.params
         try{

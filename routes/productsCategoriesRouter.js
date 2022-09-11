@@ -9,6 +9,8 @@ router.get("/", ProductsCategoriesServices.get)
 
 router.get("/:id", ProductsCategoriesServices.getById )
 
+router.put("/:id", ProductsCategoriesServices.editById )
+
 router.delete("/:id", ProductsCategoriesServices.delete )
 
 module.exports = router

@@ -35,6 +35,19 @@ class TypeMeasuresService {
         }
     }
 
+    static async editById(req, res) {
+        const { id } = req.params
+        const {name} = req.body;
+        try{
+            const typeMeasures = await typeMeasuresModel.findById(id)
+            typeMeasures.name = name
+            const consult = await typeMeasures.save()
+            res.status(201).json( consult )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de modificar el typeMeasures por el id ingresado"} )
+        }
+    }
+
     static async delete (req, res) {
         const { id } = req.params
         try{

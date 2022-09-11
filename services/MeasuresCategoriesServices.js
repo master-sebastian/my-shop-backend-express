@@ -39,6 +39,23 @@ class MeasuresCategoriesServices {
         }
     }
 
+    static async editById(req, res) {
+        const { id } = req.params
+        const {name,id_category,id_colors,id_measuretype} = req.body;
+        try{
+            const measuresCategories = await measuresCategoriesModel.findById(id)
+            measuresCategories.name = name
+            measuresCategories.id_category = mongoose.Types.ObjectId(id_category)
+            measuresCategories.id_colors = mongoose.Types.ObjectId(id_colors)
+            measuresCategories.id_measuretype = mongoose.Types.ObjectId(id_measuretype)
+            const consult = await measuresCategories.save()
+            console.log(consult)
+            res.json( consult )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de modificar el measuresCategori por el id ingresado"} )
+        }
+    }
+
     static async delete (req, res) {
         const { id } = req.params
         try{

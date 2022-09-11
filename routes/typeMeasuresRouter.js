@@ -8,6 +8,8 @@ router.get("/", TypeMeasuresService.get)
 
 router.get("/:id", TypeMeasuresService.getById )
 
+router.put("/:id", TypeMeasuresService.editById )
+
 router.delete("/:id", TypeMeasuresService.delete )
 
 module.exports = router
