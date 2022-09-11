@@ -736,7 +736,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v1/measuresCategories/63182df6833b8db7134014fc",
+							"raw": "{{domain}}/api/v1/measuresCategories/631c447f491e2b830089835f",
 							"host": [
 								"{{domain}}"
 							],
@@ -744,7 +744,7 @@
 								"api",
 								"v1",
 								"measuresCategories",
-								"63182df6833b8db7134014fc"
+								"631c447f491e2b830089835f"
 							]
 						}
 					},
@@ -820,6 +820,51 @@
 								"v1",
 								"measuresCategories",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar MeasuresCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Normal\",\r\n    \"id_category\": \"631c10c645318a55d56e1907\",\r\n    \"id_colors\": \"631c1ab38c74ca20b921282c\",\r\n    \"id_measuretype\": \"631c184045318a55d56e1959\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v1/measuresCategories/631c325a26fe1cd4bb3a6a8c",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"measuresCategories",
+								"631c325a26fe1cd4bb3a6a8c"
 							]
 						}
 					},
@@ -959,6 +1004,51 @@
 								"v1",
 								"products_category",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar categoria adicional asociada al producto por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_measurescategory\": \"62fb30d3ebf6203a36dd6555\",\r\n    \"id_product\": \"62fb3126ebf6203a36dd6556\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v1/products_category/631d71f795ed0e728976f079",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products_category",
+								"631d71f795ed0e728976f079"
 							]
 						}
 					},
@@ -1208,7 +1298,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{domain}}/api/v1/type_measures/63181fae49b83d2f6b6d46f4",
+							"raw": "{{domain}}/api/v1/type_measures/631c184045318a55d56e1959",
 							"host": [
 								"{{domain}}"
 							],
@@ -1216,7 +1306,7 @@
 								"api",
 								"v1",
 								"type_measures",
-								"63181fae49b83d2f6b6d46f4"
+								"631c184045318a55d56e1959"
 							]
 						}
 					},
@@ -1291,6 +1381,51 @@
 								"api",
 								"v1",
 								"type_measures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar tipo de medida",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tamaño\"\r\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/api/v1/type_measures/631c184045318a55d56e1959",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"type_measures",
+								"631c184045318a55d56e1959"
 							]
 						}
 					},
