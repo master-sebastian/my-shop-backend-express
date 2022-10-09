@@ -8,6 +8,8 @@ router.get("/", ColorsService.get )
 
 router.get("/:id", ColorsService.getById )
 
+router.put("/:id", ColorsService.editById )
+
 router.delete("/:id", ColorsService.delete )
 
 module.exports = router

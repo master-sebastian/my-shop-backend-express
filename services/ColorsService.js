@@ -35,6 +35,20 @@ class ColorsService {
         }
     }
 
+    static async editById(req, res) {
+        const { id } = req.params
+        const {name, hex_code} = req.body;
+        try{
+            const color = await colorsModel.findById(id)
+            color.name = name
+            color.hex_code = hex_code
+            const consult = await color.save()
+            res.status(201).json( consult )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de modificar el color por el id ingresado"} )
+        }
+    }    
+
     static async delete (req, res) {
         const { id } = req.params
         try{

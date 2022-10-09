@@ -10,6 +10,8 @@ router.get("/", ImageProductsService.get )
 
 router.get("/:id", ImageProductsService.getById )
 
+router.put("/:id", ImageProductsService.editById )
+
 router.delete("/:id", ImageProductsService.delete )
 
 module.exports = router

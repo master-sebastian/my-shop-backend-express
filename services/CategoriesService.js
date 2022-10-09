@@ -34,6 +34,19 @@ class CategoriesService{
         }
     }
 
+    static async editById(req, res) {
+        const { id } = req.params
+        const {name} = req.body;
+        try{
+            const categorie = await categoriesModel.findById(id)
+            categorie.name = name
+            const consult = await categorie.save()
+            res.status(201).json( consult )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de modificar la categoria por el id ingresado"} )
+        }
+    }
+
     static async delete (req, res) {
         const { id } = req.params
         try{

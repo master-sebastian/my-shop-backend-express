@@ -36,6 +36,21 @@ class ImageProductsService {
         }
     }
 
+
+    static async editById(req, res) {
+        const { id } = req.params
+        const {url,id_products} = req.body;
+        try{
+            const image_product = await imageProductsModel.findById(id)
+            image_product.url = url
+            image_product.id_products = mongoose.Types.ObjectId(id_products)
+            const consult = await image_product.save()
+            res.json( consult )
+        }catch(e){
+            res.status(500).json(  {error: "Error al tratar de modificar el image product por el id ingresado"} )
+        }
+    }
+
     static async delete (req, res) {
         const { id } = req.params
         try{

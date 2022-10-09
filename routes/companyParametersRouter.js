@@ -10,6 +10,8 @@ router.get("/", CompanyParametersService.get )
 
 router.get("/:id", CompanyParametersService.getById )
 
+router.put("/:id", CompanyParametersService.editById )
+
 router.delete("/:id", CompanyParametersService.delete )
 
 module.exports = router
